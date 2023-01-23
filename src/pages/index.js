@@ -5,7 +5,6 @@ import Results from '@/components/Results'
 import requests from 'utils/requests'
 
 export default function Home({data}) {
-  console.log('results', data.results)
   return (
     <>
       <Head>
