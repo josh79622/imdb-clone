@@ -5,7 +5,7 @@ import { HandThumbUpIcon } from '@heroicons/react/24/outline'
 export default function Card({result}) {
   const BASE_URL = 'https://image.tmdb.org/t/p/original'
   return (
-    <div>
+    <div className="p-3 cursor-pointer hover:text-white active:text-red-400 md:hover:scale-105 transition-transform duration-300">
       <Image
         layout='responsive'
         src={`${BASE_URL}${result.backdrop_path}`}
@@ -13,14 +13,14 @@ export default function Card({result}) {
         height={100}
         alt="movie image"
       />
-      <div className="">
-        <p className="truncate">
+      <div className="p-2">
+        <p className="truncate text-lg">
           {result.overview}
         </p>
-        <h2>{result.title || result.name}</h2>
-        <p>
+        <h2 className="text-lg font-bold">{result.title || result.name}</h2>
+        <p className="flex items-center">
           {result.release_date || result.first_air_date}
-          <HandThumbUpIcon className="h-5"/>
+          <HandThumbUpIcon className="h-5 ml-3 mr-1"/>
           {result.vote_count}
         </p>
         
