@@ -1,11 +1,12 @@
 import React from 'react'
+import Card from './Card'
 
 export default function Results({results}) {
   return (
     <div>
       {
-        results.map((result, k) => (
-          <h2 key={k}>{result.title}</h2>
+        results?.map((result) => (
+          <Card key={result.id} result={result}/>
         ))
       }
     </div>
